@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a1a"> <title>Gaming Today - Your Daily Dose of Gaming Fun</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/icons/icon-72x72.png" type="image/png"> </head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <h1 class="logo"><a href="index.html">Gaming Today</a></h1>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Unleash Your Inner Gamer</h2>
+                <p>Dive into the world of endless adventure and excitement. Play your favorite games anytime, anywhere, with our seamless PWA experience!</p>
+                <a href="games.html" class="btn">Start Playing Now!</a>
+            </div>
+        </section>
+
+        <section class="content-section container">
+            <h3>Explore the Latest in Gaming</h3>
+            <p>Welcome to Gaming Today, your ultimate hub for everything gaming! We bring you the latest news, reviews, videos, and much more. Our Progressive Web App ensures you get the best gaming experience right at your fingertips, no matter your device.</p>
+            <p>Stay tuned for daily updates, exclusive content, and a thriving community of fellow gamers. Whether you're into action, strategy, RPGs, or casual games, we've got something for everyone.</p>
+        </section>
+
+        <section class="features-section container">
+            <div class="feature-item">
+                <div class="feature-image">
+                    <img src="https://www.vizzed.com/Uploads/street_fighter_ii_wallpaper_by_darkninjavampire_d4fp6ax.jpg" alt="Street Fighter II Game Art">
+                </div>
+                <div class="feature-text">
+                    <h4>Classic Arcade Action</h4>
+                    <p>Relive the golden age of arcade gaming with timeless classics. Experience pixel-perfect combat, strategic gameplay, and iconic characters that defined a generation. Get ready to challenge your friends and master every move!</p>
+                </div>
+            </div>
+
+            <div class="feature-item reverse">
+                <div class="feature-image">
+                    <img src="https://www.capcom-games.com/marvel-vs-capcom-fc/assets/images/title/title2/ss/ss2.png" alt="Marvel vs Capcom Game Art">
+                </div>
+                <div class="feature-text">
+                    <h4>Epic Crossovers & Battles</h4>
+                    <p>Witness incredible crossovers where your favorite heroes clash in spectacular battles. Our app brings you the intensity of epic showdowns, allowing you to control powerful characters and unleash devastating combos.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-image">
+                    <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_AcaNeogeoTheLastBlade_image1600w.jpg" alt="The Last Blade Game Art">
+                </div>
+                <div class="feature-text">
+                    <h4>Discover Hidden Gems</h4>
+                    <p>Beyond the mainstream, there's a universe of hidden gems waiting to be discovered. Our curated selection introduces you to unique storylines, innovative mechanics, and unforgettable gaming experiences you won't find anywhere else.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Gaming Today. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registered! Scope:', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('Service Worker registration failed:', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

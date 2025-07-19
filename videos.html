@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <title>Gaming Today - Game Videos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="images/icons/icon-72x72.png" type="image/png" />
+</head>
+<body>
+  <!-- Header (same structure as index.html) -->
+  <header class="main-header">
+    <div class="container header-content">
+      <h1 class="logo"><a href="index.html">Gaming Today</a></h1>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="videos.html" class="active">Videos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="padding: 2rem; max-width: 1200px; margin: auto; background-color: #111; color: #fff; border-radius: 8px;">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Game Videos</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+      <!-- Video Player -->
+      <div style="flex: 1 1 65%;">
+        <iframe
+          id="video-player"
+          width="100%"
+          height="400"
+          src="https://www.youtube.com/embed/3-mMxu-tidw"
+          frameborder="0"
+          allowfullscreen
+          style="border-radius: 8px; width: 100%;">
+        </iframe>
+      </div>
+
+      <!-- Playlist -->
+      <div style="flex: 1 1 30%; max-height: 400px; overflow-y: auto; background-color: #222; border-radius: 8px; padding: 1rem;">
+        <ul id="video-list" style="list-style: none; padding: 0; margin: 0;">
+          <li><button onclick="changeVideo('PN7YFKHOR9Y')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">Elden Ring - Walkthrough Part 1</button></li>
+          <li><button onclick="changeVideo('mot35UBLmKM')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">Part 2: Limgrave Starting Loop</button></li>
+          <li><button onclick="changeVideo('rbO4ovhp3Q0')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">Part 3: Liurnia & Caelid Loop</button></li>
+          <li><button onclick="changeVideo('ikB2DmtnzSA')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">Part 4: Round Table & Combat</button></li>
+          <li><button onclick="changeVideo('e00yOk8mRDw')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">Part 5: Murkwater & Limgrave Mines</button></li>
+          <li><button onclick="changeVideo('Y1I3-kulxs4')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">SMG Part 1 – Gateway & Good Egg</button></li>
+          <li><button onclick="changeVideo('4-_Ar2GoJnc')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">SMG Part 2 – Honeyhive & Loop</button></li>
+          <li><button onclick="changeVideo('KkMDhzvBVFA')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">SMG Part 3 – Bowser Jr's Reactor</button></li>
+          <li><button onclick="changeVideo('x14SsfKQA5c')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">SMG Part 4 – Space Junk Galaxy</button></li>
+          <li><button onclick="changeVideo('VExD4kQmQ0w')" style="display: block; width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; background: none; border: none; text-align: left; color: #fff; cursor: pointer;">SMG Part 5 – Sling Pod + Hurry</button></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (same structure as index.html) -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 Gaming Today. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function changeVideo(videoId) {
+      const player = document.getElementById('video-player');
+      player.src = `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    // Optional: toggle nav menu on mobile
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        toggleBtn.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
